@@ -7,7 +7,7 @@ services:
     image: atendai/evolution-api
     restart: always
     ports:
-      - 8080:8080
+      - 8082:8082
     volumes:
       - evolution_instances:/evolution/instances
       - evolution_store:/evolution/store
@@ -15,7 +15,7 @@ services:
       - .env
     command: ['node', './dist/src/main.js']
     expose:
-      - 8080
+      - 8082
 
 volumes:
   evolution_instances:
